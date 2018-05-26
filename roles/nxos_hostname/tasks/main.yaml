@@ -1,0 +1,8 @@
+---
+- name: Set switch hostname
+  nxos_config:
+    lines: hostname {{ hostname }}
+
+- name: Set domain-name
+  nxos_config:
+    lines: ip domain-name {{ domain }}

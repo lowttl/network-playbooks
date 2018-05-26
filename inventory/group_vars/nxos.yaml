@@ -1,0 +1,6 @@
+ansible_network_os: nxos
+
+routes:
+  - prefix: 0.0.0.0/0
+    vrf: management
+    next_hop: 100.64.1.1

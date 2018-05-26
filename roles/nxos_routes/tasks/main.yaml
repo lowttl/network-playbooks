@@ -1,0 +1,8 @@
+---
+
+- nxos_static_route:
+    prefix: "{{ item.prefix }}"
+    next_hop: "{{ item.next_hop }}"
+    vrf: "{{ item.vrf | default('default') }}"
+    pref: "{{ item.preference | default('default') }}"
+  with_items: "{{ routes }}"
