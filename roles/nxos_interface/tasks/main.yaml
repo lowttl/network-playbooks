@@ -16,8 +16,8 @@
 - name: Configure L2 trunks
   nxos_l2_interface:
     name: "{{ item.name }}"
-    mode: "{{ item.switchport_mode|default('access') }}"
+    mode: trunk
   with_items:
     - "{{ interfaces }}"
     - "{{ portchannels }}"
-  when: trunk is defined
+  when: (trunk is defined) and trunk
