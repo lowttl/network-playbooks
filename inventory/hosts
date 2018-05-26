@@ -1,3 +1,6 @@
-[nxos]
+[nxos:children]
+nxos_vpc12
+
+[nxos_vpc12]
 100.64.1.41
 100.64.1.42

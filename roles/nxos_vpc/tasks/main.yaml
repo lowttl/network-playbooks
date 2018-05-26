@@ -1,0 +1,15 @@
+---
+- name: Configure VPC pair
+  nxos_vpc:
+    domain: "{{ vpc.domain }}"
+    role_priority: "{{ vpc.role_priority }}"
+    system_priority: "{{ vpc.system_priority }}"
+    pkl_dest: "{{ vpc.pkl_dst }}"
+    pkl_src: "{{ vpc.pkl_src }}"
+    peer_gw: true
+    auto_recovery: true
+
+- name: Configure VPC peer-link
+  nxos_vpc_interface:
+    portchannel: 4000
+    peer_link: true

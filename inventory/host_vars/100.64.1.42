@@ -1,13 +1,9 @@
 ---
 hostname: sw2
 
-interfaces:
-  - name: Ethernet 1/46
-  - name: Ethernet 1/47
-  - name: Ethernet 1/48
-
-portchannels:
-  - group: 4000
-    members:
-      - Ethernet 1/47
-      - Ethernet 1/48
+vpc:
+  domain: 12
+  role_priority: 2000
+  system_priority: 2000
+  pkl_src: 100.64.1.42
+  pkl_dst: 100.64.1.41

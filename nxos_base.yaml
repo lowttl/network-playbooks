@@ -8,4 +8,5 @@
     - nxos_hostname
     - nxos_feature
     - nxos_interface
+    - nxos_vpc
     - nxos_routes

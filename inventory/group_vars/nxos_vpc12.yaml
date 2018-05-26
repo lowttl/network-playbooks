@@ -1,0 +1,16 @@
+interfaces:
+   - name: Ethernet 1/46
+     mode: layer3
+   - name: Ethernet 1/47
+     switchport_mode: trunk
+   - name: Ethernet 1/48
+     switchport_mode: trunk
+
+portchannels:
+  - name: Port-channel 4000
+    group: 4000
+    members:
+      - Ethernet 1/47
+      - Ethernet 1/48
+    switchport_mode: trunk
+    trunk: True
