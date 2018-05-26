@@ -1,0 +1,14 @@
+---
+- name: Enable interfaces
+  nxos_interface:
+    name: "{{ item.name }}"
+    mode: "{{ item.mode |default('layer2') }}"
+  with_items: "{{ interfaces }}" 
+
+- name: Configure Port-channels
+  nxos_linkagg:
+    group: "{{ item.group }}"
+    mode: active
+    members:
+       "{{ item.members }}"
+  with_items: "{{ portchannels }}"

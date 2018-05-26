@@ -1,0 +1,8 @@
+---
+
+- name: Ensure features are enabled
+  nxos_feature:
+    feature: "{{ item }}"
+    state: enabled
+  loop:
+    "{{ features }}"

@@ -1,2 +1,13 @@
 ---
 hostname: sw1
+
+interfaces:
+   - name: Ethernet 1/46
+   - name: Ethernet 1/47
+   - name: Ethernet 1/48
+
+portchannels:
+  - group: 4000
+    members:
+      - Ethernet 1/47
+      - Ethernet 1/48

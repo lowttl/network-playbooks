@@ -6,4 +6,6 @@
 
   roles:
     - nxos_hostname
+    - nxos_feature
+    - nxos_interface
     - nxos_routes
