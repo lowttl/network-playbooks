@@ -8,4 +8,4 @@ portchannels:
     members:
       - Ethernet 1/47
       - Ethernet 1/48
-    trunk: True
+    trunk: true

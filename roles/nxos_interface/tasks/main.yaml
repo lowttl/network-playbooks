@@ -20,4 +20,4 @@
   with_items:
     - "{{ interfaces }}"
     - "{{ portchannels }}"
-  when: (trunk is defined) and trunk
+  when: item.trunk|default(false)|bool
