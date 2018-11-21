@@ -11,6 +11,6 @@
           - hostname SW1
 
     - name: Set SNMP
-        ios_config:
-          lines:
-          - snmp-server community mycomm ro
+      ios_config:
+        lines:
+          - snmp-server community mycomm RO
