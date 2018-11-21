@@ -1,0 +1,12 @@
+---
+
+- hosts: ios
+  gather_facts: no
+  connection: network_cli
+
+  tasks:
+    - name: Configure hostname/snmp
+      ios_config:
+        lines:
+          - hostname SW1
+          - snmp-server community mycomm ro
